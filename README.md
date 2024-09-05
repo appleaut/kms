@@ -6,7 +6,7 @@ Tutorial -> [Click](https://github.com/appleaut/kms/wiki)
 
 ### Quick Install
 ```bash
-virtualenv venv --python=python3.12.4
+virtualenv venv --python=python3.12.3
 cd kms
 source ../venv/bin/activate
 pip install -r requirements.txt
