@@ -33,7 +33,7 @@ class Article(models.Model):
         ordering = ('-id',)
 
     def __str__(self):
-        return self.title
+        return self.id
     
     
 class Comment(models.Model):
