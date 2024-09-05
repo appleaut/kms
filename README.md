@@ -1,4 +1,4 @@
-[Django tutorial](https://mugit.mahidol.ac.th/muit-App/django/knowledge-management/-/wikis/home)
+[Django tutorial](https://github.com/appleaut/kms/wiki)
 
 
 ----
