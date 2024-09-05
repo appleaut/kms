@@ -19,6 +19,9 @@ from django.views.generic import RedirectView
 from django.conf.urls.static import static
 from django.conf import settings
 
+# Change title of admin site
+admin.site.site_header = 'Knowledge Management System'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='content/')),
