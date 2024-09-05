@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.http import HttpRequest
 from content_app.models import Article, Category, Comment
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -10,13 +11,16 @@ class CategoryAdmin(admin.ModelAdmin):
     readonly_fields = ('created_by', 'last_updated_by', 'created_at', 'last_updated_at')
     
     def has_delete_permission(self, request, obj=None):
-        return request.user.is_superuser or request.user.is_staff
+        return request.user.is_staff
     
     def has_add_permission(self, request):
-        return request.user.is_superuser or request.user.is_staff
+        return request.user.is_superuser
     
     def has_change_permission(self, request, obj=None):
-        return request.user.is_superuser or request.user.is_staff
+        return request.user.is_superuser
+    
+    def has_view_permission(self, request, obj=None):
+        return request.user.is_staff
 
 
 class CommentInline(admin.TabularInline):
@@ -37,13 +41,17 @@ class ArticleAdmin(admin.ModelAdmin):
     readonly_fields = ('created_by', 'last_updated_by', 'created_at', 'last_updated_at')
     
     def has_delete_permission(self, request, obj=None):
-        return request.user.is_superuser or request.user.is_staff
+        return request.user.is_superuser
     
     def has_add_permission(self, request):
-        return request.user.is_superuser or request.user.is_staff
+        return request.user.is_staff
     
     def has_change_permission(self, request, obj=None):
-        return request.user.is_superuser or request.user.is_staff
+        return request.user.is_staff
+    
+    def has_view_permission(self, request, obj=None):
+        return request.user.is_staff
+    
     
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Article, ArticleAdmin)
