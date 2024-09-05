@@ -1,4 +1,5 @@
-[Django tutorial](https://github.com/appleaut/kms/wiki)
+## Building a Knowledge Management System using the Django Framework
+[(Tutorial)](https://github.com/appleaut/kms/wiki)
 
 
 ----
