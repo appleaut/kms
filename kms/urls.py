@@ -21,7 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='authen/')),
-    path('authen/', include('authen_app.urls')),
+    path('', RedirectView.as_view(url='content/')),
+    path('permission/', include('permission_app.urls')),
     path('content/', include('content_app.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
