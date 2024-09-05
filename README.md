@@ -1,5 +1,4 @@
-# User Manual
-[wiki](https://mugit.mahidol.ac.th/muit-App/django/knowledge-management/-/wikis/home)
+[Django tutorial](https://mugit.mahidol.ac.th/muit-App/django/knowledge-management/-/wikis/home)
 
 
 ----
